@@ -1,0 +1,33 @@
+
+#uno{
+border-right: 1px solid black;
+}
+#jugador{
+  z-index: 3
+  margin-top: 10;
+  font-size: 30;
+  text-align: center;
+}
+GridLayout{
+  margin-top: 20;
+
+}
+.jugar{
+  margin-top: 80%;
+  border-radius: 30;
+  width: 100;
+}
+.fullscreen {
+
+    background-image: url('https://t3.ftcdn.net/jpg/01/22/45/76/240_F_122457629_yPACQiccqt9DsyxKE8zZK3b7vwYYHdl5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.juego{
+    background-color: #7023A7;
+  
+    color: white;
+    text-align: center;
+    font-size: 100;
+}

@@ -1,0 +1,69 @@
+
+
+
+<ScrollView class="fullscreen">
+  <Label id="jugador" text="Le toca a el {{this.jugador}}" >
+  </Label>
+
+  
+</ScrollView>
+<GridLayout  columns="*, *, *" rows="*,*,*" width="80%" height="80%"
+    backgroundColor="lightgray">
+
+
+<!-- 1 -->
+        <Label class="juego"  text="{{this.uno}}" *ngIf="control1==0"  (tap)="cambiar(1)" row="0" col="0"  id="uno" >  </Label>
+        <Label text="{{this.uno}}"  class="juego" *ngIf="control1==1"   row="0" col="0"  id="uno" >
+        </Label>
+
+<!-- 2 -->
+
+        <Label  text="{{this.dos}}" class="juego"  *ngIf="control2==0" row="0" col="1" (tap)="cambiar(2)" id="dos">
+        </Label>
+        <Label  text="{{this.dos}}"   class="juego" *ngIf="control2==1" row="0" col="1"  id="dos">
+        </Label>
+
+
+
+        <!-- 3 -->
+        <Label text="{{this.tres}}" class="juego" *ngIf="control3==0" row="0" col="2" (tap)="cambiar(3)" id="tres">
+        </Label>
+        <Label text="{{this.tres}}" class="juego" *ngIf="control3==1" row="0" col="2"  id="tres">
+        </Label>
+        <!-- 4 -->
+        <Label  text="{{this.cuatro}}"class="juego" *ngIf="control4==0" row="1" col="0" colSpan="1" (tap)="cambiar(4)" id="cuatro"
+        ></Label>
+        <Label  text="{{this.cuatro}}" class="juego" *ngIf="control4==1" row="1" col="0" colSpan="1"  id="cuatro"
+        ></Label>
+        <!-- 5 -->
+        <Label  text="{{this.cinco}}"class="juego"  *ngIf="control5==0"  row="1" col="1" rowSpan="1" (tap)="cambiar(5)" id="cinco"
+        ></Label>
+        <Label  text="{{this.cinco}}" class="juego" *ngIf="control5==1"  row="1" col="1" rowSpan="1"  id="cinco"
+        ></Label>
+        <!-- 6 -->
+        <Label  text="{{this.seis}}"  class="juego" *ngIf="control6==0" row="1" col="2"  (tap)="cambiar(6)"  id="seis">
+        </Label>
+        <Label  text="{{this.seis}}" class="juego"  *ngIf="control6==1" row="1" col="2"   id="seis">
+        </Label>
+        <!-- 7 -->
+        <Label text="{{this.siete}}" class="juego" *ngIf="control7==0"  row="3" col="0"  (tap)="cambiar(7)" id="siete">
+        </Label>
+        <Label text="{{this.siete}}" class="juego" *ngIf="control7==1"  row="3" col="0"   id="siete">
+        </Label>
+        <!-- 8 -->
+        <Label  text="{{this.ocho}}" class="juego" *ngIf="control8==0"  row="3" col="1" (tap)="cambiar(8)" id="ocho">
+        </Label>
+        <Label  text="{{this.ocho}}"  class="juego" *ngIf="control8==1"  row="3" col="1"  id="ocho">
+        </Label>
+        <!-- 9 -->
+        <Label  text="{{this.nueve}}"class="juego"  *ngIf="control9==0" row="3" col="2" (tap)="cambiar(9)" id="nueve">
+        </Label>
+        <Label  text="{{this.nueve}}" class="juego" *ngIf="control9==1" row="3" col="2"  id="nueve">
+        </Label>
+
+
+</GridLayout>
+
+
+
+<Button text="Ir al inicio"  class="jugar" [nsRouterLink]="['/inicio']"></Button>

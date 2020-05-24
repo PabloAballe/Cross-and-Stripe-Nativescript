@@ -1,0 +1,22 @@
+
+.bienvenida{
+  font-size: 30;
+  text-align: center;
+  margin-top: 100;
+  z-index: 20;
+}
+.fullscreen {
+    z-index: 1;
+    background-image: url('https://cdn5.f-cdn.com/contestentries/1465388/27319887/5c437042565d6_thumb900.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.jugar{
+  margin-top: 80%;
+  border-radius: 30;
+    width: 200;
+}
+.titulo{
+  background-color:#7527AF;
+}
