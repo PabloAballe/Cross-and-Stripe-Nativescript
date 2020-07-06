@@ -1,0 +1,38 @@
+
+
+
+.uno, .dos{
+
+
+text-align: center;
+  z-index: 20;
+
+  font-size: 40px;
+
+  color: #003334;
+  margin: 27% 10% 5% 10%;
+}
+.dos{
+  margin-top: 800px;
+}
+.fullscreen {
+    z-index: 1;
+    background-image: url('https://cdn6.f-cdn.com/contestentries/185004/9062157/551727800a494_thumb900.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.jugar, .jugar1{
+
+  border-radius: 30px;
+
+    color: #003334;
+    background-color: #FFFF66;
+    font-size: 30px;
+  margin: 60% 5% 20% 10%;
+  z-index: 20;
+  width: 80%;
+}
+.jugar1{
+ margin-top: 70%;
+}

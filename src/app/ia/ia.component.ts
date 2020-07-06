@@ -8,12 +8,12 @@ import { EmpatadosComponent } from "../empatados/empatados.component";
 import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
-    selector: "Tablero",
+    selector: "IA",
     moduleId: module.id,
-    templateUrl: "./tablero.component.html",
-    styleUrls: ["./tablero.component.css"]
+    templateUrl: "./ia.component.html",
+    styleUrls: ["./ia.component.css"]
 })
-export class TableroComponent implements OnInit {
+export class IAComponent implements OnInit {
 
   constructor(private page: Page, private routerExtensions: RouterExtensions) {
  }
@@ -44,7 +44,9 @@ ronda=1;
  ocho="";
  nueve="";
 
-
+// ia
+casilla=[1,2,3,4,5,6,7,8];
+control=[1,2,3,4,5,6,7,8];
 
 
 
@@ -65,6 +67,9 @@ ronda=1;
 
 
     }
+
+
+
 reiniciar(){
   //funciones de control para el juego
   this.control1=0;
@@ -76,6 +81,12 @@ reiniciar(){
   this.control7=0;
   this.control8=0;
   this.control9=0;
+
+  // ia
+  this.casilla=[1,2,3,4,5,6,7,8];
+  this.control=[1,2,3,4,5,6,7,8];
+
+
 
   //puntuaciones
   this.puntuacionx=0;
@@ -92,6 +103,7 @@ reiniciar(){
   this.siete="";
   this.ocho="";
   this.nueve="";
+
 
 
   //globaales
@@ -115,6 +127,10 @@ limpiar(){
   this.control8=0;
   this.control9=0;
 
+  // ia
+  this.casilla=[1,2,3,4,5,6,7,8];
+  this.control=[1,2,3,4,5,6,7,8];
+
 
 //casillas
   this.uno="";
@@ -128,7 +144,7 @@ limpiar(){
   this.nueve="";
 
 
-  //globaales
+  //globales
   this.comienzo=true;
   this.jugador="";
   this.jugador1="X";
@@ -170,45 +186,56 @@ if (this.jugador=="X"){
 this.marca="X"
 
 }else{
-  this.marca="O"
+  this.marca="O";
+
+
 }
 
 if (numero==1){
    this.uno = this.marca;
    this.control1=1;
 
+
 }
 else if(numero==2){
   this.dos=this.marca;
 this.control2=1;
+
 }
 else if(numero==3){
   this.tres=this.marca;
+
 this.control3=1;
 }
 else if(numero==4){
   this.cuatro=this.marca;
 this.control4=1;
+
 }
 else if(numero==5){
   this.cinco=this.marca;
 this.control5=1;
+
 }
 else if(numero==6){
   this.seis=this.marca;
 this.control6=1;
+
 }
 else if(numero==7){
   this.siete=this.marca;
+
 this.control7=1;
 }
 else if(numero==8){
   this.ocho=this.marca;
+
 this.control8=1;
 }
 else if(numero==9){
   this.nueve=this.marca;
   this.control9=1;
+
 }
 
 if(this.uno=="X" && this.dos=="X"&&this.tres=="X" || this.cuatro=="X"&& this.cinco=="X"&&this.seis=="X" || this.siete=="X"&&this.ocho=="X"&&this.nueve=="X" || this.uno=="X"&&this.cuatro=="X"&&this.siete=="X"||this.dos=="X"&&this.cinco=="X"&&this.ocho=="X"|| this.tres=="X"&&this.seis=="X"&&this.nueve=="X"|| this.uno=="X"&& this.cinco=="X"&& this.nueve=="X"|| this.tres=="X"&&this.cinco=="X"&&this.siete=="X"){
@@ -248,12 +275,22 @@ if (
     this.routerExtensions.navigate(["empatados"], { clearHistory: true });
   }
 
-
-
+if (this.comienzo==false&&this.estado==true){
+  this.ia();
 }
 
+// revisar
+  this.casilla.splice(numero, 1);
+}
 
+ia(){
+  console.log("casilla antes de quitar elemetnos "+this.casilla);
+    const ia= this.casilla[Math.floor(Math.random() * this.casilla.length)];
 
+    console.log("numero a quitar "+ia)
+    this.cambiar(ia-1);
+    console.log("casilla despues elemetnos"+this.casilla);
+}
 
 
 

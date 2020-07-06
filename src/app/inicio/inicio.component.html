@@ -1,12 +1,17 @@
-<ActionBar class="titulo">
-    <Label   text="Bienvenido a Cruz y Raya"></Label>
-</ActionBar>
-  <Label class="bienvenida" text="Bienvenido a Cruz y Raya"></Label>
 
-<ScrollView class="fullscreen">
+  <Label class="bienvenida"   text="Bienvenido"></Label>
+
+  <Label class="sub"text="a"></Label>
 
 
+    <Label class="bienvenida1" text="X/O"></Label>
 
-  <Button text="DOS JUGADORES" class="jugar" [nsRouterLink]="['/home']"></Button>
 
-</ScrollView>
+
+  <GridLayout class="fullscreen" >
+
+  <Button text="Un jugador" clearHistory="true" class="uno" pageTransition="slide" [nsRouterLink]="['/ia']"></Button>
+
+  <Button text="Dos jugadores" clearHistory="true" class="jugar" pageTransition="slide" [nsRouterLink]="['/tablero']"></Button>
+
+</GridLayout>

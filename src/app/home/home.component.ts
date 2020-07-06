@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import {TableroComponent} from "../Tablero/tablero.component";
 import {InicioComponent} from "../inicio/inicio.component";
+import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
     selector: "Home",
@@ -10,10 +11,12 @@ import {InicioComponent} from "../inicio/inicio.component";
 })
 export class HomeComponent implements OnInit {
 
-    constructor() {
-        // Use the component constructor to inject providers.
+  constructor(private routerExtensions: RouterExtensions) {
     }
 
+    goBack(): void {
+            this.routerExtensions.back();
+        }
     ngOnInit(): void {
         // Init your component properties here.
     }

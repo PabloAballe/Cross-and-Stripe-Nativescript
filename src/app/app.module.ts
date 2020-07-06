@@ -7,9 +7,13 @@ import { AppComponent } from "./app.component";
 
 //component
 
-import {HomeComponent} from "./home/home.component";
-import {TableroComponent} from "./Tablero/tablero.component";
-import {InicioComponent} from "./inicio/inicio.component";
+import { HomeComponent } from "./home/home.component";
+import { TableroComponent } from "./Tablero/tablero.component";
+import { InicioComponent } from "./inicio/inicio.component";
+import { AlertaxComponent } from "./alertax/alertax.component";
+import { AlertaoComponent } from "./alertao/alertao.component";
+import { EmpatadosComponent } from "./empatados/empatados.component";
+import { IAComponent } from "./ia/ia.component";
 
 
 @NgModule({
@@ -25,6 +29,10 @@ import {InicioComponent} from "./inicio/inicio.component";
         HomeComponent,
         TableroComponent,
         InicioComponent,
+        AlertaxComponent,
+        AlertaoComponent,
+        EmpatadosComponent,
+        IAComponent,
     ],
     schemas: [
         NO_ERRORS_SCHEMA

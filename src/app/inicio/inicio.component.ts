@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-
+import { Page } from "tns-core-modules/ui/page";
 
 
 
@@ -11,13 +11,10 @@ import { Component, OnInit } from "@angular/core";
 })
 export class InicioComponent implements OnInit {
 
-constructor(){
+  constructor(private page: Page) {
+      }
 
-}
-
-    ngOnInit(): void{
-
-
-    }
-
-}
+      ngOnInit(): void {
+          this.page.actionBarHidden = true;
+      }
+  }

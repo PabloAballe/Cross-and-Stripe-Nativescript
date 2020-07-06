@@ -1,0 +1,7 @@
+<AbsoluteLayout  class="fullscreen">
+
+  <Label class="uno" text="Lo siento"></Label>
+  <Label class="dos" text="¡No ha ganado nadie!"></Label>
+  <Button  text="Ir al inicio" clearHistory="true" pageTransition="slide" class="jugar1" [nsRouterLink]="['/inicio']"></Button>
+  <Button text="Jugar de nuevo" clearHistory="true" class="jugar" pageTransition="slide" (tap)="jugar()"></Button>
+</AbsoluteLayout >
